@@ -16,7 +16,7 @@ function ApplyDoctor() {
   const handleFinish=async(values)=>{
     try{
       dispatch(showLoading())
-      const res = await axios.post('/api/v1/user/apply-doctor',{...values, userId:user._id,timings:[
+      const res = await axios.post('https://hospital-management-veiu.onrender.com/api/v1/user/apply-doctor',{...values, userId:user._id,timings:[
         moment(values.timings[0]).format("HH:mm"),
         moment(values.timings[1]).format("HH:mm")
     ],},{
