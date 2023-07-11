@@ -13,7 +13,7 @@ const ProtectedRoute = ({children}) => {
   const getUser=async()=>{
     try{
       dispatch(showLoading())
-      const res=await axios.post('/api/v1/user/getUserData',
+      const res=await axios.post('https://hospital-management-veiu.onrender.com/api/v1/user/getUserData',
       {token: localStorage.getItem("token")},
       {
         headers:{
