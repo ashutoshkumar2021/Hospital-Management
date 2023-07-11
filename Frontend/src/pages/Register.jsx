@@ -11,7 +11,7 @@ const Register = () =>{
   const onFinishHandler=async(values)=>{
      try{
        dispatch(showLoading());
-       const res=await axios.post('/api/v1/user/register',values)
+       const res=await axios.post('https://hospital-management-veiu.onrender.com/api/v1/user/register',values)
        dispatch(hideLoading());
        if(res.data.success){
         message.success('Register Successfully!')
