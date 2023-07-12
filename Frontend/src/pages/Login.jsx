@@ -15,7 +15,6 @@ const Login = () => {
     try {
       dispatch(showLoading())
       const res = await axios.post("https://hospital-management-veiu.onrender.com/api/v1/user/login", values);
-      window.location.reload();
       dispatch(hideLoading())
       if (res.data.success) {
         localStorage.setItem("token", res.data.token);
