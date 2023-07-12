@@ -12,7 +12,7 @@ const BookingPage = () => {
     const [isAvailable,setIsAvailable]=useState()
     const getUserData = async () => {
         try {
-            const res = await axios.post('/api/v1/doctor/getDoctorById', { doctorId: params.doctorId }, {
+            const res = await axios.post('https://hospital-management-veiu.onrender.com/api/v1/doctor/getDoctorById', { doctorId: params.doctorId }, {
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token")
                 },
