@@ -34,10 +34,10 @@ const Login = () => {
       <div className="form-container" id="form">
         <Form layout="vertical" onFinish={onFinishHandler} className="register-form">
               <h3 className='text-center' id="text-center">Login Form</h3>
-              <Form.Item label="Email" name="email">
+              <Form.Item label="Email" name="email" placehoder="admin@gmail.com">
                 <Input type="email" required/>
               </Form.Item>
-              <Form.Item label="Password" name="password">
+              <Form.Item label="Password" name="password" placeholder="1234">
                 <Input type="password" required/>
               </Form.Item>
               <Link to="/Register" className="m-2">Not a user Register here</Link>
