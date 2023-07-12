@@ -14,7 +14,7 @@ const NotificationPage = () => {
     const handleMarkAllRead=async()=>{
         try{
            dispatch(showLoading())
-           const res=await axios.post('/api/v1/user/get-all-notification',{userId:user._id},{headers:{Authorization:`Bearer ${localStorage.getItem("token")}`}})
+           const res=await axios.post('https://hospital-management-veiu.onrender.com/api/v1/user/get-all-notification',{userId:user._id},{headers:{Authorization:`Bearer ${localStorage.getItem("token")}`}})
            dispatch(hideLoading())
            if(res.data.success){
             message.success(res.data.message)
@@ -32,7 +32,7 @@ const NotificationPage = () => {
     const handleDeleteAllRead=async()=>{
         try{
             dispatch(showLoading())
-            const res=await axios.post('/api/v1/user/delete-all-notification',{userId:user._id},{headers:{Authorization:`Bearer ${localStorage.getItem("token")}`}})
+            const res=await axios.post('https://hospital-management-veiu.onrender.com/api/v1/user/delete-all-notification',{userId:user._id},{headers:{Authorization:`Bearer ${localStorage.getItem("token")}`}})
             dispatch(hideLoading())
             if(res.data.success){
                 message.success(res.data.message)
